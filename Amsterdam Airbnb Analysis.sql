@@ -61,7 +61,7 @@ select correct_id,host_id,host_name, price ,(30-availability_30),price*(30-avail
 select host_id,host_name,sum(revenue) as total from temp_table group by host_id order by total desc ;
 
 
-# searching for bad reviews regarding cleaning: 
+# searching for negative reviews regarding cleaning: 
 select reviews1.listing_id , listings.host_name,
 listings.review_scores_value, count(listings.correct_id) as number_of_negative_reviews_regarding_cleaning
  from listings
